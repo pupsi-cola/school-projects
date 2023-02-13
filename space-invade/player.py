@@ -17,6 +17,7 @@ score = 0
     #space pressed, shoot
 
 #if player hp hits 0
+if player_hp = 0
     #show explosion
     #wait 3 seconds
     #go to game start screen
