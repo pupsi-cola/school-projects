@@ -5,7 +5,6 @@ main_dir = os.path.split(os.path.abspath(__file__))[0]
 data_dir = os.path.join(main_dir, "data")
 
 clock = pygame.time.Clock()
-
 pygame.init()
 pygame.display.init()
 
@@ -16,10 +15,8 @@ screen.fill((89, 5, 128))
 
 
 class player(pygame.sprite.Sprite):
-    def __init__(self, x, y):
-        super(player, self).__init__()
+    def __init__(self, x):
         self.x = x
-        self.y = y
         self.image = pygame.image.load("ship.gif").convert_alpha()
         self.rect = self.image.get_rect()
 
@@ -31,10 +28,12 @@ while run:
     #player animation
     keys = pygame.key.get_pressed()
     
+    ship = player(player, 0)
+
     if keys[pygame.K_LEFT]:
-        player.x -= 5
+        ship.x -= 5
     if keys[pygame.K_RIGHT]:
-        player.x += 5
+        ship.x += 5
     if keys[pygame.K_SPACE]:
         pass
     
