@@ -117,9 +117,6 @@ while not done:
         score += 1
 
     # Draw the sprites
-
-
-
     screen.fill((0, 0, 0))
     for sprite in all_sprites:
         pygame.draw.rect(screen, (255, 255, 255), sprite.rect)
